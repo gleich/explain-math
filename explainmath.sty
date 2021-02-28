@@ -4,12 +4,24 @@
 % Required packages
 \RequirePackage{amsmath}
 
-%% Side explain
-\newcommand{\lexplain}[2]{\textrm{#1} \begin{cases} #2 \end{cases}}
 %% Bottom explain
-\newcommand{\bexplain}[2]{\underbrace{#1}_{\textrm{#2}}}
+\providecommand{\bexplain}[2]{\underbrace{#1}_{\textrm{#2}}}
 %% Top explain
-\newcommand{\texplain}[2]{\overbrace{#1}^{\textrm{#2}}}
+\providecommand{\texplain}[2]{\overbrace{#1}^{\textrm{#2}}}
 
-%% Starting equation for the problem
-\newcommand{\initialeq}[1]{\sexplain{Initial \textit{eq.}}{#1}}
+%% Regular explain
+\providecommand{\explain}[2]{\textrm{#1}&\rightarrow \begin{cases} #2 \end{cases} \\}
+
+%% Initial equation
+\providecommand{\initialeq}[1]{\explain{Initial \textit{eq.}}{#1}}
+
+%% Variable declaration
+\providecommand{\variables}[1]{\explain{Variables}{#1}}
+
+%% Problem declaration
+\providecommand{\sol}[1]{
+    \begin{center}
+        \item \textit{Sol.}
+        \item #1
+    \end{center}
+}

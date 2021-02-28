@@ -1,6 +1,6 @@
 \documentclass{report}
 
-\title{Package Example}
+\title{explainmath example}
 \author{Matthew Gleich}
 \date{ }
 
@@ -11,6 +11,33 @@
 \begin{document}
     \maketitle
 
-    \[ \initialeq{2x + 3} \]
-    \[ \texplain{2x}{No more 3!} \]
+    \section{Basic Math Example}
+        \begin{align*}
+            \initialeq{-2(x + 2) = 6}
+            \explain{Foil out -2}{
+                (-2 \cdot x) + (-2 \cdot 2) = 6 \\
+                -2x - 4 = 6
+            }
+            \explain{Remove -4 from the left}{
+                -2x - 4 + 4 = 6 + 4 \\
+                -2x = 10
+            }
+            \explain{Remove -2 from the left}{
+                \frac{-2x}{-2} = \frac{10}{-2} \\
+                x = -5
+            }
+        \end{align*}
+        \sol{$ x = -5 $}
+
+    \section{Basic Physics Example}
+        \begin{align*}
+            \initialeq{p = mv}
+            \variables{
+                p = \textrm{?} \textrm{ kg} \cdot \frac{\textrm{m}}{\textrm{s}} \\
+                m = 3.0 \textrm{ k.g} \\
+                v = 5.0 \textrm{ m/s East}
+            }
+            \explain{Plug \& solve}{p = 3 \cdot 5}
+        \end{align*}
+        \sol{$ p = 15 \textrm{ kg} \cdot \frac{\textrm{m}}{\textrm{s}} $}
 \end{document}
