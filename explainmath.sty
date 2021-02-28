@@ -1,0 +1,15 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{explainmath}[2021/02/28 Explain Math]
+
+% Required packages
+\RequirePackage{amsmath}
+
+%% Side explain
+\newcommand{\lexplain}[2]{\textrm{#1} \begin{cases} #2 \end{cases}}
+%% Bottom explain
+\newcommand{\bexplain}[2]{\underbrace{#1}_{\textrm{#2}}}
+%% Top explain
+\newcommand{\texplain}[2]{\overbrace{#1}^{\textrm{#2}}}
+
+%% Starting equation for the problem
+\newcommand{\initialeq}[1]{\sexplain{Initial \textit{eq.}}{#1}}
