@@ -18,10 +18,18 @@
 %% Variable declaration
 \providecommand{\variables}[1]{\explain{Variables}{#1}}
 
-%% Problem declaration
+%% Solution declaration
 \providecommand{\sol}[1]{
     \begin{center}
-        \item \textit{Sol.}
+        \item \textit{Sol.} \S
         \item #1
     \end{center}
+}
+
+%% Math Solution declaration
+\providecommand{\msol}[1]{
+    \begin{center}
+        \item \textit{Sol.} \S
+    \end{center}
+    \[ #1 \]
 }

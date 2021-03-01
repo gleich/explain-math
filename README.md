@@ -12,6 +12,7 @@
     - [`\initialeq`](#initialeq)
     - [`\variables`](#variables)
     - [`\sol`](#sol)
+    - [`\msol`](#msol)
     - [`\bexplain`](#bexplain)
     - [`\aexplain`](#aexplain)
 
@@ -118,7 +119,22 @@ Example:
 
 ```latex
 \sol{All real numbers}
-\sol{$ x = 10 $}
+```
+
+### `\msol`
+
+Description: Solution to a problem with math
+
+Required parent environment: None
+
+Parameters:
+
+1. Solution (math mode)
+
+Example:
+
+```latex
+\msol{x = 10}
 ```
 
 ### `\bexplain`
