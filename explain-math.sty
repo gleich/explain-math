@@ -10,10 +10,10 @@
 \providecommand{\aexplain}[2]{\overbrace{#1}^{\textrm{#2}}}
 
 %% Regular explain
-\providecommand{\explain}[2]{\textrm{#1}&\rightarrow \begin{cases} \displaystyle #2 \end{cases} \\}
+\providecommand{\explain}[2]{\textrm{#1}&\rightarrow \begin{cases} #2 \end{cases} \\}
 
 %% Initial equation
-\providecommand{\initialeq}[1]{\explain{Initial \textit{eq.}}{#1}}
+\providecommand{\initialeq}[1]{\explain{Initial \textit{eq.}}{\displaystyle #1}}
 
 %% Variable declaration
 \providecommand{\variables}[1]{\explain{Variables}{#1}}
