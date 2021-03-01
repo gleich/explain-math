@@ -17,10 +17,11 @@
 
 ## 🚀 Installation
 
-Copy the [package file](explain-math.sty) to `/usr/local/texlive/texmf-local/tex/latex/local` on your machine. This can be accomplished with the following command:
+Copy the [package file](explain-math.sty) to `/usr/local/texlive/texmf-local/tex/latex/local` on your machine. This can be accomplished with the following commands:
 
 ```bash
 sudo cp explain-math.sty /usr/local/texlive/texmf-local/tex/latex/local
+sudo texhash
 ```
 
 If you need to uninstall just remove the file by running the following command:
