@@ -35,6 +35,7 @@ Once you have that you can just call the package:
 
 ```latex
 \usepackage{explain-math}
+\usepackage[cases]{cases} % Used for displaystyle in the braces
 ```
 
 ## ✨ Commands
