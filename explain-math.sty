@@ -5,12 +5,12 @@
 \RequirePackage{amsmath}
 
 %% Bottom explain
-\providecommand{\bexplain}[2]{\underbrace{#1}_{\textrm{#2}}}
+\providecommand{\bexplain}[2]{\underbrace{#1}_{\text{#2}}}
 %% Top explain
-\providecommand{\aexplain}[2]{\overbrace{#1}^{\textrm{#2}}}
+\providecommand{\aexplain}[2]{\overbrace{#1}^{\text{#2}}}
 
 %% Regular explain
-\providecommand{\explain}[2]{\textrm{#1}&\rightarrow \begin{cases} #2 \end{cases} \\}
+\providecommand{\explain}[2]{\text{#1}&\rightarrow \begin{cases} #2 \end{cases} \\}
 
 %% Initial equation
 \providecommand{\initialeq}[1]{\explain{Initial \textit{eq.}}{\displaystyle #1}}
