@@ -11,6 +11,10 @@
     - [`\explain`](#explain)
     - [`\initialeq`](#initialeq)
     - [`\variables`](#variables)
+    - [`\var`](#var)
+    - [`\vart`](#vart)
+    - [`\varu`](#varu)
+    - [`\vartu`](#vartu)
     - [`\sol`](#sol)
     - [`\msol`](#msol)
     - [`\bexplain`](#bexplain)
@@ -105,6 +109,52 @@ Example:
     }
 \end{align*}
 ```
+
+### `\var`
+
+Description: Variable declaration
+
+Required parent environment: `align` or `align*`
+
+Parameters:
+
+1. Name (math mode)
+2. Value (math mode)
+
+### `\vart`
+
+Description: Variable declaration with name in text
+
+Required parent environment: `align` or `align*`
+
+Parameters:
+
+1. Name (normal mode)
+2. Value (math mode)
+
+### `\varu`
+
+Description: Variable declaration with unit
+
+Required parent environment: `align` or `align*`
+
+Parameters:
+
+1. Name (math mode)
+2. Value (math mode)
+3. Unit (normal mode)
+
+### `\vartu`
+
+Description: Variable declaration with text and unit
+
+Required parent environment: `align` or `align*`
+
+Parameters:
+
+1. Name (normal mode)
+2. Value (math mode)
+3. Unit (normal mode)
 
 ### `\sol`
 
