@@ -5,6 +5,8 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{graphicx}
+\RequirePackage[cases]{cases}
+\RequirePackage{mathrsfs}
 
 %% Bottom explain
 \providecommand{\bexplain}[2]{\underbrace{#1}_{\text{#2}}}
@@ -12,30 +14,43 @@
 \providecommand{\aexplain}[2]{\overbrace{#1}^{\text{#2}}}
 
 %% Regular explain
-\providecommand{\explain}[2]{\text{#1 \reflectbox{\rotatebox[origin=c]{270}{\vspace{1mm} $ \looparrowright $}}} \longleftrightarrow & \begin{cases} #2 \end{cases} \\}
+\providecommand{\explain}[2]{\text{#1 :: \reflectbox{\rotatebox[origin=c]{270}{\vspace{1mm} $ \looparrowright $}}} \raisebox{.154\baselineskip}{\vspace{1mm}\rule{0.4cm}{0.5pt}} & \begin{cases} #2 \end{cases} \\}
 
-%% Initial equation
-\providecommand{\initialeq}[1]{\explain{Initial $ \mathfrak{eq.}$}{\displaystyle #1}}
+%% Initial equation (DEPRECATED. PLEASE USE \equation)
+\providecommand{\initialeq}[1]{\explain{Initial \textit{eq.}}{\displaystyle #1}}
+
+%% Equation
+\providecommand{\equation}[1]{\explain{Initial Equation}{\displaystyle #1}}
+
+%% Formula
+\providecommand{\formula}[1]{\explain{Initial Formula}{\displaystyle #1}}
+
+%% Statement
+\providecommand{\statement}[1]{\explain{Initial Statement}{\displaystyle #1}}
+
+%% Step
+\providecommand{\step}[1]{#1 \\}
 
 %% Variable declaration section
 \providecommand{\variables}[1]{\explain{Variables}{#1}}
 
 %% Variable declaration
-\providecommand{\var}[2]{#1 = #2}
+\providecommand{\var}[2]{#1 = #2 \\}
 
 %% Variable declaration with text
-\providecommand{\vart}[2]{\text{#1} = #2}
+\providecommand{\vart}[2]{\text{#1} = #2 \\}
 
 %% Variable declaration with unit
-\providecommand{\varu}[3]{#1 = #2 \text{ #3}}
+\providecommand{\varu}[3]{#1 = #2 \text{ #3} \\}
 
 %% Variable declaration with text and unit
-\providecommand{\vartu}[3]{\text{#1} = #2 \text{ #3}}
+\providecommand{\vartu}[3]{\text{#1} = #2 \text{ #3} \\}
 
 %% Solution declaration
 \providecommand{\sol}[1]{
     \begin{center}
-        \item $ \mathfrak{sol.} $
+        \item \reflectbox{\rotatebox[origin=c]{45}{$ \dots $}} $ \downarrow $ \reflectbox{\rotatebox[origin=c]{135}{$ \dots $}}
+        \item \textit{sol.}
         \item #1
     \end{center}
 }
@@ -43,7 +58,8 @@
 %% Math Solution declaration
 \providecommand{\msol}[1]{
     \begin{center}
-        \item $ \mathfrak{sol.} $
+        \item \reflectbox{\rotatebox[origin=c]{45}{$ \dots $}} $ \downarrow $ \reflectbox{\rotatebox[origin=c]{135}{$ \dots $}}
+        \item \textit{sol.}
     \end{center}
     \[ #1 \]
 }

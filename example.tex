@@ -7,35 +7,35 @@
 \makeindex
 
 \usepackage{explain-math}
-\usepackage[cases]{cases} % Used for displaystyle in the braces
 
 \begin{document}
     \maketitle
 
     \section{Basic Math Example}
         \begin{align*}
-            \initialeq{-2(x + 2) = 6}
+            \statement{-2(x + 2) = 6}
             \explain{Distribute out -2}{
-                (-2 \cdot x) + (-2 \cdot 2) = 6 \\
-                -2x - 4 = 6
+                \step{ (-2 \cdot x) + (-2 \cdot 2) = 6 }
+                \step{ -2x - 4 = 6 }
             }
             \explain{Remove -4 from the left}{
-                -2x - 4 + 4 = 6 + 4 \\
-                -2x = 10
+                \step{ -2x - 4 + 4 = 6 + 4 }
+                \step{ -2x = 10 }
             }
             \explain{Remove -2 from the left}{
-                \frac{-2x}{-2} = \frac{10}{-2} \\
-                x = -5
+                \step{ \frac{-2x}{-2} = \frac{10}{-2} }
+                \step{ \frac{-2x}{-2} = \frac{10}{-2} }
+                \step{ x = -5 }
             }
         \end{align*}
         \msol{x = -5}
 
     \section{Basic Physics Example}
         \begin{align*}
-            \initialeq{p = mv}
+            \formula{p = mv}
             \variables{
-                \varu{p}{\text{?}}{kg $ \frac{\text{m}}{\text{s}} $} \\
-                \varu{m}{3.0}{k.g} \\
+                \varu{p}{\text{?}}{kg $ \frac{\text{m}}{\text{s}} $}
+                \varu{m}{3.0}{k.g}
                 \varu{v}{5.0}{m/s East}
             }
             \explain{Plug \& solve}{p = 3 \cdot 5}

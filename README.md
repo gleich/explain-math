@@ -9,7 +9,10 @@
   - [🚀 Installation](#-installation)
   - [✨ Commands](#-commands)
     - [`\explain`](#explain)
-    - [`\initialeq`](#initialeq)
+    - [`\step`](#step)
+    - [`\equation`](#equation)
+    - [`\formula`](#formula)
+    - [`\statement`](#statement)
     - [`\variables`](#variables)
     - [`\var`](#var)
     - [`\vart`](#vart)
@@ -39,7 +42,6 @@ Once you have that you can just call the package:
 
 ```latex
 \usepackage{explain-math}
-\usepackage[cases]{cases} % Used for displaystyle in the braces
 ```
 
 ## ✨ Commands
@@ -63,27 +65,84 @@ Example:
 \begin{align*}
     \explain{Here is some math}{2 + 2 = 4}
     \explain{Here is some multiline math}{
-        2 + 2 = 4 \\
-        10 - 10 = 0
+        \step{ 2 + 2 = 4 }
+        \step{ 10 - 10 = 0 }
     }
 \end{align*}
 ```
 
-### `\initialeq`
+### `\step`
 
-Description: Initial equation/formula
+Description: A step inside the math section of the `\explain` environment
 
-Required parent environment: `align` or `align*`
+Required parent environment: None, but should be inside `\explain` arg #2
 
 Parameters:
 
-1. Equation/formula (math mode)
+1. Math (math mode)
 
 Example:
 
 ```latex
 \begin{align*}
-    \initialeq{a^2 + b^2 = c^2}
+    \explain{Here is some multiline math}{
+        \step{ 2 + 2 = 4 }
+        \step{ 10 - 10 = 0 }
+    }
+\end{align*}
+```
+
+### `\equation`
+
+Description: Initial equation
+
+Required parent environment: `align` or `align*`
+
+Parameters:
+
+1. Equation (math mode)
+
+Example:
+
+```latex
+\begin{align*}
+    \equation{c^2 = a^2 + b^2}
+\end{align*}
+```
+
+### `\formula`
+
+Description: Initial formula
+
+Required parent environment: `align` or `align*`
+
+Parameters:
+
+1. Formula (math mode)
+
+Example:
+
+```latex
+\begin{align*}
+    \formula{P = x + b}
+\end{align*}
+```
+
+### `\statement`
+
+Description: Initial math statement
+
+Required parent environment: `align` or `align*`
+
+Parameters:
+
+1. Math statement (math mode)
+
+Example:
+
+```latex
+\begin{align*}
+    \statement{-2(x + 2) = 6}
 \end{align*}
 ```
 
@@ -121,6 +180,10 @@ Parameters:
 1. Name (math mode)
 2. Value (math mode)
 
+```latex
+\var{x}{10}
+```
+
 ### `\vart`
 
 Description: Variable declaration with name in text
@@ -131,6 +194,10 @@ Parameters:
 
 1. Name (normal mode)
 2. Value (math mode)
+
+```latex
+\vart{x}{10}
+```
 
 ### `\varu`
 
@@ -144,6 +211,10 @@ Parameters:
 2. Value (math mode)
 3. Unit (normal mode)
 
+```latex
+\varu{x}{10}{cm}
+```
+
 ### `\vartu`
 
 Description: Variable declaration with text and unit
@@ -155,6 +226,10 @@ Parameters:
 1. Name (normal mode)
 2. Value (math mode)
 3. Unit (normal mode)
+
+```latex
+\var{x}{10}{cm}
+```
 
 ### `\sol`
 
