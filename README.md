@@ -228,7 +228,7 @@ Parameters:
 3. Unit (normal mode)
 
 ```latex
-\var{x}{10}{cm}
+\vartu{x}{10}{cm}
 ```
 
 ### `\sol`
