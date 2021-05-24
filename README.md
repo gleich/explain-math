@@ -10,7 +10,7 @@
   - [✨ Commands](#-commands)
     - [`\explain`](#explain)
     - [`\step`](#step)
-    - [`\equation`](#equation)
+    - [`\eq`](#eq)
     - [`\formula`](#formula)
     - [`\statement`](#statement)
     - [`\variables`](#variables)
@@ -39,7 +39,7 @@ sudo rm /usr/local/texlive/texmf-local/tex/latex/local/explain-math.sty
 
 Once you have that you can just call the package:
 
-```latex
+```tex
 \usepackage{explain-math}
 ```
 
@@ -60,7 +60,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \begin{align*}
     \explain{Here is some math}{2 + 2 = 4}
     \explain{Here is some multiline math}{
@@ -82,7 +82,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \begin{align*}
     \explain{Here is some multiline math}{
         \step{ 2 + 2 = 4 }
@@ -91,9 +91,9 @@ Example:
 \end{align*}
 ```
 
-### `\equation`
+### `\eq`
 
-Description: Initial equation
+Description: Equation
 
 Required parent environment: `align` or `align*`
 
@@ -103,15 +103,15 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \begin{align*}
-    \equation{c^2 = a^2 + b^2}
+    \eq{c^2 = a^2 + b^2}
 \end{align*}
 ```
 
 ### `\formula`
 
-Description: Initial formula
+Description: Formula
 
 Required parent environment: `align` or `align*`
 
@@ -121,7 +121,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \begin{align*}
     \formula{P = x + b}
 \end{align*}
@@ -129,7 +129,7 @@ Example:
 
 ### `\statement`
 
-Description: Initial math statement
+Description: Math statement
 
 Required parent environment: `align` or `align*`
 
@@ -139,7 +139,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \begin{align*}
     \statement{-2(x + 2) = 6}
 \end{align*}
@@ -157,7 +157,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \begin{align*}
     \variables{a = 2}
     \varables{
@@ -179,7 +179,7 @@ Parameters:
 1. Name (math mode)
 2. Value (math mode)
 
-```latex
+```tex
 \var{x}{10}
 ```
 
@@ -194,7 +194,7 @@ Parameters:
 1. Name (normal mode)
 2. Value (math mode)
 
-```latex
+```tex
 \vart{x}{10}
 ```
 
@@ -210,7 +210,7 @@ Parameters:
 2. Value (math mode)
 3. Unit (normal mode)
 
-```latex
+```tex
 \varu{x}{10}{cm}
 ```
 
@@ -226,7 +226,7 @@ Parameters:
 2. Value (math mode)
 3. Unit (normal mode)
 
-```latex
+```tex
 \vartu{x}{10}{cm}
 ```
 
@@ -242,7 +242,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \sol{All real numbers}
 ```
 
@@ -258,7 +258,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 \msol{x = 10}
 ```
 
@@ -275,7 +275,7 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 $ \bexplain{This isn't true}{2 + 2 = 0} $
 ```
 
@@ -292,6 +292,6 @@ Parameters:
 
 Example:
 
-```latex
+```tex
 $ \aexplain{This is true}{2 + 2 = 4} $
 ```
