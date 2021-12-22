@@ -1,7 +1,7 @@
 # explain-math
 
 <div align="center">
-  <img alt="logo" src="./example.jpg" height="370px">
+  <img alt="logo" src="./example.png" height="370px">
   <p>🧮 A handy LaTeX package for writing readable and explained mathematics</p>
 </div>
 
@@ -19,7 +19,6 @@
     - [`\varu`](#varu)
     - [`\vartu`](#vartu)
     - [`\sol`](#sol)
-    - [`\msol`](#msol)
     - [`\bexplain`](#bexplain)
     - [`\aexplain`](#aexplain)
 
@@ -234,23 +233,7 @@ Parameters:
 
 Description: Solution to a problem
 
-Required parent environment: None
-
-Parameters:
-
-1. Solution (normal mode)
-
-Example:
-
-```tex
-\sol{All real numbers}
-```
-
-### `\msol`
-
-Description: Solution to a problem with math
-
-Required parent environment: None
+Required parent environment: `align` or `align*`
 
 Parameters:
 
@@ -259,7 +242,7 @@ Parameters:
 Example:
 
 ```tex
-\msol{x = 10}
+\sol{x = 10}
 ```
 
 ### `\bexplain`

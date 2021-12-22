@@ -14,7 +14,8 @@
 \providecommand{\aexplain}[2]{\overbrace{#1}^{\text{#2}}}
 
 %% Regular explain
-\providecommand{\explain}[2]{\text{#1 :: \reflectbox{\rotatebox[origin=c]{270}{\vspace{1mm} $ \looparrowright $}}} & \begin{cases} #2 \end{cases} \\}
+\providecommand{\explain}[2]{
+    \text{#1 :: } \reflectbox{\rotatebox[origin=c]{270}{\vspace{1mm} $ \looparrowright $}} &\begin{cases} #2 \end{cases} \\}
 
 %% Initial equation (DEPRECATED. PLEASE USE \eq)
 \providecommand{\initialeq}[1]{\explain{Initial \textit{eq.}}{\displaystyle #1}}
@@ -46,20 +47,9 @@
 %% Variable declaration with text and unit
 \providecommand{\vartu}[3]{\text{#1} = #2 \text{ #3} \\}
 
-%% Solution declaration
+%% Solution to an equation
 \providecommand{\sol}[1]{
-    \begin{center}
-        \item \reflectbox{\rotatebox[origin=c]{45}{$ \dots $}} $ \downarrow $ \reflectbox{\rotatebox[origin=c]{135}{$ \dots $}}
-        \item \textit{sol.}
-        \item #1
-    \end{center}
-}
-
-%% Math Solution declaration
-\providecommand{\msol}[1]{
-    \begin{center}
-        \item \reflectbox{\rotatebox[origin=c]{45}{$ \dots $}} $ \downarrow $ \reflectbox{\rotatebox[origin=c]{135}{$ \dots $}}
-        \item \textit{sol.}
-    \end{center}
-    \[ #1 \]
+    &{\reflectbox{\rotatebox[origin=c]{-35}{\big\downarrow}}} \\
+    &\hspace{0.4cm}\text{\textit{sol}:} \\
+    &\hspace{0.4cm}\fbox{$ \displaystyle #1 $} \\
 }
